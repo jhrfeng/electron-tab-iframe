@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>万能思维导图</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body style="margin:0">
+
+    <tab-group sortable="true" id="myIframe" name="myIframe"></tab-group>
+
+
+    <!-- <div> -->
+      <!-- <iframe id="myIframe" name="myIframe" src="https://www.mymind365.com/doc/manage/list" frameborder="0" scrolling="no" width="100%" height="100%" webpreferences="nodeIntegration=true"> </iframe> -->
+   <!-- </div> -->
+
+    <script src="../node_modules/electron-tabs/dist/electron-tabs.js"></script>
+    <script src="./renderer.js"></script>
+    <script>
+    //   const tabGroup = document.querySelector("tab-group");
+    //   tabGroup.on("ready", () => console.info("TabGroup is ready"));
+    
+    //   tabGroup.setDefaultTab({
+    //     title: "",
+    //     src: "https://www.mymind365.com/doc/manage/list",
+    //     active: false,
+    //     ready: () => console.info("New Tab is ready")
+    //   });
+    
+    //   tabGroup.addTab({
+    //     title: "主页",
+    //     src: "https://www.mymind365.com/doc/manage/list",
+    //     iconURL: "mark-github.svg",
+    //     closable: false,
+    //     active: true,
+    //     webviewAttributes:{
+    //       allowpopups: true,
+    //       nodeintegration: true
+    //     },
+    //     ready: function(tab) {
+          
+    //     }
+    //   });
+    </script>
+
+   <script>
+    const iframe = document.getElementById('myIframe')
+    // 在窗口大小改变时重新调整 iframe 的大小
+    window.addEventListener('resize', () => {
+      iframe.style.width = '100%'
+      iframe.style.height = window.innerHeight + 'px'
+    })
+  </script>
+  </body>
+</html>
